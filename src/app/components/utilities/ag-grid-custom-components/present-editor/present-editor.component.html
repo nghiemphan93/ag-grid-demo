@@ -1,0 +1,23 @@
+<!--<form #container [formGroup]="form">-->
+<!--  <select formControlName="selectedOption">-->
+<!--    <option [ngValue]="true">-->
+<!--      <fa-icon class="h-full w-full" [icon]="faCheck"></fa-icon>-->
+<!--      &lt;!&ndash;      <p>true</p>&ndash;&gt;-->
+<!--    </option>-->
+<!--    <option [ngValue]="false">-->
+<!--      <fa-icon class="h-full w-full inline-block" [icon]="faX"></fa-icon>-->
+<!--      &lt;!&ndash;      <p>false</p>&ndash;&gt;-->
+<!--    </option>-->
+<!--  </select>-->
+<!--</form>-->
+
+<form class="w-full h-full" nz-form #container [formGroup]="form">
+  <nz-select class="w-full h-full" formControlName="selectedOption">
+    <nz-option [nzValue]="true">
+      <span nz-icon nzType="check" nzTheme="outline"></span
+    ></nz-option>
+    <nz-option [nzValue]="false">
+      <span nz-icon nzType="close" nzTheme="outline"></span
+    ></nz-option>
+  </nz-select>
+</form>

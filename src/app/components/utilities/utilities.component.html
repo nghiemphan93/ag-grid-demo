@@ -1,0 +1,16 @@
+<div class="w-full h-full container mx-auto">
+  <p>Ag-Grid Demo</p>
+
+  <ag-grid-angular
+    class="h-5/6 ag-theme-alpine container mx-auto"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [editType]="editType"
+    [rowData]="utilities | async"
+    (rowValueChanged)="onRowValueChanged($event)"
+    (rowEditingStopped)="onRowEditingStop($event)"
+    (rowEditingStarted)="onRowEditingStarted($event)"
+    (gridReady)="onGridReady($event)"
+    [overlayLoadingTemplate]="overlayLoadingTemplate"
+  ></ag-grid-angular>
+</div>
